@@ -45,8 +45,11 @@ body, html {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  margin: 25px 50px;
   display: none;
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 25px;
 }
 
 #title {
@@ -76,4 +79,18 @@ body, html {
 #logo {
   margin-top: 20px;
   margin-bottom: 0;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+.poem {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: none;
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 25px;
+}
 }
