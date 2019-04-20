@@ -2,6 +2,8 @@ const titleText = document.getElementById('title');
 const authorText = document.getElementById('author');
 const contentText = document.getElementById('content');
 const randomButtonDiv = document.querySelector('.randomButton');
+const authorTitle = document.querySelector('.poet');
+const poemDiv = document.querySelector('.poem');
 
 const no_cors = "https://cors-anywhere.herokuapp.com/";
 
@@ -11,10 +13,12 @@ function getPoem() {
     .then(data => {
       let fivePoems = data;
       let currentPoem = fivePoems[0];
+      poemDiv.style.display = 'block';
       titleText.textContent = currentPoem.title;
-      contentText.textContent = currentPoem.content;
       authorText.textContent = currentPoem.poet.name;
-      console.log(currentPoem);
+      thisPoemContent = currentPoem.content;
+      formattedContent = thisPoemContent.replace( /\.(\s+)[A-Z]/g, '<br /><br />');
+      contentText.innerHTML = formattedContent;
     })
 
 }
