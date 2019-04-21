@@ -17,7 +17,7 @@ function getPoem() {
       titleText.textContent = currentPoem.title;
       authorText.textContent = currentPoem.poet.name;
       thisPoemContent = currentPoem.content;
-      formattedContent = thisPoemContent.replace( /\.(\s+)[A-Z]/g, '<br /><br />');
+      formattedContent = thisPoemContent.replace( /\.(\s+)/g, '<br /><br />');
       contentText.innerHTML = formattedContent;
     })
 
